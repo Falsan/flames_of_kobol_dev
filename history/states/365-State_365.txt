@@ -4,6 +4,11 @@ state={
 	provinces={
 		66 67 68 69 263 489 723 724 749 750 1180 
 	}
+	history={
+		owner = SCO
+		add_core_of = SCO
+
+	}
 	manpower=0
 	buildings_max_level_factor=1.000
 }

@@ -1,0 +1,13 @@
+﻿l_english:
+ PIC_fascism:0 "Test Country"
+ PIC_fascism_DEF:0 "Test Country"
+ PIC_democratic:0 "Test Country"
+ PIC_democratic_DEF:0 "Test Country"
+ PIC_neutrality:1 "Test Country"
+ PIC_neutrality_DEF:1 "Test Country"
+ PIC_communism:0 "Test Country"
+ PIC_communism_DEF:0 "Test Country"
+ PIC_fascism_ADJ:0 "Test Country"
+ PIC_democratic_ADJ:0 "Test Country"
+ PIC_neutrality_ADJ:0 "Test Country"
+ PIC_communism_ADJ:0 "Test Country"

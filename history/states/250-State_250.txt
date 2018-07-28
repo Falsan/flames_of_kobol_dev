@@ -4,6 +4,11 @@ state={
 	provinces={
 		98 99 100 101 1338 
 	}
+	history={
+		owner = AQU
+		add_core_of = AQU
+
+	}
 	manpower=0
 	buildings_max_level_factor=1.000
 }

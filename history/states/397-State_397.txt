@@ -4,6 +4,11 @@ state={
 	provinces={
 		756 1311 1312 
 	}
+	history={
+		owner = SAG
+		add_core_of = SAG
+
+	}
 	manpower=0
 	buildings_max_level_factor=1.000
 }

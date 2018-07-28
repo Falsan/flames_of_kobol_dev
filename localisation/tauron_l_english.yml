@@ -1,0 +1,13 @@
+﻿l_english:
+ TAU_fascism:0 "Test Country"
+ TAU_fascism_DEF:0 "Test Country"
+ TAU_democratic:0 "Test Country"
+ TAU_democratic_DEF:0 "Test Country"
+ TAU_neutrality:1 "Test Country"
+ TAU_neutrality_DEF:1 "Test Country"
+ TAU_communism:0 "Test Country"
+ TAU_communism_DEF:0 "Test Country"
+ TAU_fascism_ADJ:0 "Test Country"
+ TAU_democratic_ADJ:0 "Test Country"
+ TAU_neutrality_ADJ:0 "Test Country"
+ TAU_communism_ADJ:0 "Test Country"

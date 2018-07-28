@@ -2,3 +2,51 @@ TST = {
 	color = rgb { 57 113 228 }
 	color_ui = rgb { 74 147 255 }
 }
+SAG = {
+	color = rgb { 247 208 158 }
+	color_ui = rgb { 247 208 158 }
+}
+SCO = {
+	color = rgb { 75 114 52 }
+	color_ui = rgb { 75 114 52 }
+}
+TAU = {
+	color = rgb { 223 167 129 }
+	color_ui = rgb { 223 167 129 }
+}
+VIR = {
+	color = rgb { 166 74 152 }
+	color_ui = rgb { 166 74 152 }
+}
+AER = {
+	color = rgb { 176 21 71 }
+	color_ui = rgb { 176 21 71 }
+}
+CAN = {
+	color = rgb { 213 166 240 }
+	color_ui = rgb { 213 166 240 }
+}
+CAP = {
+	color = rgb { 134 137 213 }
+	color_ui = rgb { 134 137 213 }
+}
+GEM = {
+	color = rgb { 122 150 128 }
+	color_ui = rgb { 122 150 128 }
+}
+LEO = {
+	color = rgb { 132 130 148 }
+	color_ui = rgb { 132 130 148 }
+}
+LIB = {
+	color = rgb { 84 82 148 }
+	color_ui = rgb { 84 82 148 }
+}
+PIC = {
+	color = rgb { 50 33 26 }
+	color_ui = rgb { 50 33 26 }
+}
+AQU = {
+	color = rgb { 144 169 112 }
+	color_ui = rgb { 144 169 112 }
+}

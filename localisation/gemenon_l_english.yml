@@ -1,0 +1,13 @@
+﻿l_english:
+ GEM_fascism:0 "Test Country"
+ GEM_fascism_DEF:0 "Test Country"
+ GEM_democratic:0 "Test Country"
+ GEM_democratic_DEF:0 "Test Country"
+ GEM_neutrality:1 "Test Country"
+ GEM_neutrality_DEF:1 "Test Country"
+ GEM_communism:0 "Test Country"
+ GEM_communism_DEF:0 "Test Country"
+ GEM_fascism_ADJ:0 "Test Country"
+ GEM_democratic_ADJ:0 "Test Country"
+ GEM_neutrality_ADJ:0 "Test Country"
+ GEM_communism_ADJ:0 "Test Country"

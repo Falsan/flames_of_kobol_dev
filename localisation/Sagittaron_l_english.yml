@@ -1,0 +1,13 @@
+﻿l_english:
+ SAG_fascism:0 "Test Country"
+ SAG_fascism_DEF:0 "Test Country"
+ SAG_democratic:0 "Test Country"
+ SAG_democratic_DEF:0 "Test Country"
+ SAG_neutrality:1 "Test Country"
+ SAG_neutrality_DEF:1 "Test Country"
+ SAG_communism:0 "Test Country"
+ SAG_communism_DEF:0 "Test Country"
+ SAG_fascism_ADJ:0 "Test Country"
+ SAG_democratic_ADJ:0 "Test Country"
+ SAG_neutrality_ADJ:0 "Test Country"
+ SAG_communism_ADJ:0 "Test Country"

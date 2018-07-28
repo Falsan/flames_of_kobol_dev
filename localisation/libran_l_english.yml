@@ -1,0 +1,13 @@
+﻿l_english:
+ LIR_fascism:0 "Test Country"
+ LIR_fascism_DEF:0 "Test Country"
+ LIR_democratic:0 "Test Country"
+ LIR_democratic_DEF:0 "Test Country"
+ LIR_neutrality:1 "Test Country"
+ LIR_neutrality_DEF:1 "Test Country"
+ LIR_communism:0 "Test Country"
+ LIR_communism_DEF:0 "Test Country"
+ LIR_fascism_ADJ:0 "Test Country"
+ LIR_democratic_ADJ:0 "Test Country"
+ LIR_neutrality_ADJ:0 "Test Country"
+ LIR_communism_ADJ:0 "Test Country"

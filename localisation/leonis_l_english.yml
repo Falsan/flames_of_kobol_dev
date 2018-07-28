@@ -1,0 +1,13 @@
+﻿l_english:
+ LEO_fascism:0 "Test Country"
+ LEO_fascism_DEF:0 "Test Country"
+ LEO_democratic:0 "Test Country"
+ LEO_democratic_DEF:0 "Test Country"
+ LEO_neutrality:1 "Test Country"
+ LEO_neutrality_DEF:1 "Test Country"
+ LEO_communism:0 "Test Country"
+ LEO_communism_DEF:0 "Test Country"
+ LEO_fascism_ADJ:0 "Test Country"
+ LEO_democratic_ADJ:0 "Test Country"
+ LEO_neutrality_ADJ:0 "Test Country"
+ LEO_communism_ADJ:0 "Test Country"

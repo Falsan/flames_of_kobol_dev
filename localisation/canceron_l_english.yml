@@ -1,0 +1,13 @@
+﻿l_english:
+ CAC_fascism:0 "Test Country"
+ CAC_fascism_DEF:0 "Test Country"
+ CAC_democratic:0 "Test Country"
+ CAC_democratic_DEF:0 "Test Country"
+ CAC_neutrality:1 "Test Country"
+ CAC_neutrality_DEF:1 "Test Country"
+ CAC_communism:0 "Test Country"
+ CAC_communism_DEF:0 "Test Country"
+ CAC_fascism_ADJ:0 "Test Country"
+ CAC_democratic_ADJ:0 "Test Country"
+ CAC_neutrality_ADJ:0 "Test Country"
+ CAC_communism_ADJ:0 "Test Country"
