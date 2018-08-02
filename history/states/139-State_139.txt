@@ -4,6 +4,11 @@ state={
 	provinces={
 		220 586 983 
 	}
+	history={
+		owner = TAU
+		add_core_of = TAU
+
+	}
 	manpower=0
 	buildings_max_level_factor=1.000
 }

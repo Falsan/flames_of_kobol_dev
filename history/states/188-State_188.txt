@@ -4,6 +4,11 @@ state={
 	provinces={
 		320 429 765 1009 1121 
 	}
+	history={
+		owner = CAP
+		add_core_of = CAP
+
+	}
 	manpower=0
 	buildings_max_level_factor=1.000
 }

@@ -4,6 +4,11 @@ state={
 	provinces={
 		498 987 1270 1315 
 	}
+	history={
+		owner = LEO
+		add_core_of = LEO
+
+	}
 	manpower=0
 	buildings_max_level_factor=1.000
 }

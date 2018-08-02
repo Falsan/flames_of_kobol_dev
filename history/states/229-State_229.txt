@@ -4,6 +4,11 @@ state={
 	provinces={
 		783 784 981 1086 
 	}
+	history={
+		owner = PIC
+		add_core_of = PIC
+
+	}
 	manpower=0
 	buildings_max_level_factor=1.000
 }

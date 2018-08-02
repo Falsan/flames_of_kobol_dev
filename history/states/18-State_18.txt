@@ -4,6 +4,11 @@ state={
 	provinces={
 		143 155 156 157 
 	}
+	history={
+		owner = LIR
+		add_core_of = LIR
+
+	}
 	manpower=0
 	buildings_max_level_factor=1.000
 }
