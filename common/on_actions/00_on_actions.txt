@@ -1,0 +1,14 @@
+on_actions = {
+
+	on_startup = {
+	`	effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				set_variable = { welcome_screen_var = 1 }
+			}
+		}
+	}
+	
+}

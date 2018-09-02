@@ -1,0 +1,686 @@
+focus_tree = {
+	id = caprica_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CAP
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 500 y = 1000 }
+
+
+	focus = {
+		id = CAP_Conference_Initial
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		x = 8
+		y = 0
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+
+		completion_reward = {
+			country_event = caprica.1
+		}
+	}
+	
+	###########################################################################
+	#Economic Issues
+	
+	focus = {
+		id = CAP_Economic_Issues
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Conference_Initial
+		x = -4
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Conference_Initial
+		}
+
+		completion_reward = {
+			country_event = caprica.2
+		}
+	}
+	
+	####################################
+	#Colonial path
+	
+	focus = {
+		id = CAP_Economic_Issue_Colonial
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Economic_Issues
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_flag = CAP_Colonial_Economic_Flag
+		}
+		
+		prerequisite = {
+			focus = CAP_Economic_Issues
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Economic_Issue_Cylon
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Economic_Bonus_1_Colonial
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Economic_Issue_Colonial
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Economic_Issue_Colonial
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Economic_Bonus_2_Colonial
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Economic_Bonus_1_Colonial
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Economic_Bonus_1_Colonial
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	############################################################
+	#Economic Cylon
+	
+	focus = {
+		id = CAP_Economic_Issue_Cylon
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Economic_Issues
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_flag = CAP_Cylon_Economic_Flag
+		}
+		
+		prerequisite = {
+			focus = CAP_Economic_Issues
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Economic_Issue_Colonial
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Economic_Bonus_1_Cylon
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Economic_Issue_Cylon
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Economic_Issue_Cylon
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Economic_Bonus_2_Cylon
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Economic_Bonus_1_Cylon
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Economic_Bonus_1_Cylon
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Economic_Bonus_3_Finished
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Economic_Bonus_2_Colonial
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Economic_Bonus_2_Colonial
+			focus = CAP_Economic_Bonus_2_Cylon
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	###########################################################################
+	#Environment Issues
+	
+	focus = {
+		id = CAP_Environment_Issues
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Conference_Initial
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Conference_Initial
+		}
+
+		completion_reward = {
+			country_event = caprica.3
+		}
+	}
+	
+	####################################
+	#Colonial path
+	
+	focus = {
+		id = CAP_Environment_Issue_Colonial
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Environment_Issues
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_flag = CAP_Colonial_Environment_Flag
+		}
+		
+		prerequisite = {
+			focus = CAP_Environment_Issues
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Environment_Issue_Cylon
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Environment_Bonus_1_Colonial
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Environment_Issue_Colonial
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Environment_Issue_Colonial
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Environment_Bonus_2_Colonial
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Environment_Bonus_1_Colonial
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Environment_Bonus_1_Colonial
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	############################################################
+	#Environment Cylon
+	
+	focus = {
+		id = CAP_Environment_Issue_Cylon
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Environment_Issues
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_flag = CAP_Cylon_Environment_Flag
+		}
+		
+		prerequisite = {
+			focus = CAP_Environment_Issues
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Environment_Issue_Colonial
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Environment_Bonus_1_Cylon
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Environment_Issue_Cylon
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Environment_Issue_Cylon
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Environment_Bonus_2_Cylon
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Environment_Bonus_1_Cylon
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Environment_Bonus_1_Cylon
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Environment_Bonus_3_Finished
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Environment_Bonus_2_Colonial
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Environment_Bonus_2_Colonial
+			focus = CAP_Environment_Bonus_2_Cylon
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	###########################################################################
+	#Society Issues
+	
+	focus = {
+		id = CAP_Society_Issues
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Conference_Initial
+		x = 4
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Conference_Initial
+		}
+
+		completion_reward = {
+			country_event = caprica.4
+		}
+	}
+	
+	####################################
+	#Colonial path
+	
+	focus = {
+		id = CAP_Society_Issue_Colonial
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Society_Issues
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_flag = CAP_Colonial_Social_Flag
+		}
+		
+		prerequisite = {
+			focus = CAP_Society_Issues
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Society_Issue_Cylon
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Society_Bonus_1_Colonial
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Society_Issue_Colonial
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Society_Issue_Colonial
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Society_Bonus_2_Colonial
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Society_Bonus_1_Colonial
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Society_Bonus_1_Colonial
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	############################################################
+	#Society Cylon
+	
+	focus = {
+		id = CAP_Society_Issue_Cylon
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Society_Issues
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_flag = CAP_Cylon_Social_Flag
+		}
+		
+		prerequisite = {
+			focus = CAP_Society_Issues
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Society_Issue_Colonial
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Society_Bonus_1_Cylon
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Society_Issue_Cylon
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Society_Issue_Cylon
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Society_Bonus_2_Cylon
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Society_Bonus_1_Cylon
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Society_Bonus_1_Cylon
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Society_Bonus_3_Finished
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Society_Bonus_2_Colonial
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Society_Bonus_2_Colonial
+			focus = CAP_Society_Bonus_2_Cylon
+		}
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = CAP_Conference_Final
+		
+		icon = GFX_goal_generic_national_unity
+		cost = 1.00
+		relative_position_id = CAP_Environment_Bonus_3_Finished
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Environment_Bonus_3_Finished
+		}
+		prerequisite = {
+			focus = CAP_Economic_Bonus_3_Finished
+		}
+		prerequisite = {
+			focus = CAP_Society_Bonus_3_Finished
+		}
+
+		completion_reward = {
+
+		}
+	}
+}
