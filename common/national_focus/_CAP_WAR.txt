@@ -1,0 +1,3896 @@
+focus_tree = {
+	id = Caprica_War_Focus_Tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CAP
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1500 }
+	
+
+	#############################################################################################################
+	#Industrial tree
+	
+	focus = {
+		id = CAP_Economic_Policy
+		icon = GFX_goal_generic_production
+		x = 44
+		y = 0
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = { 
+				bonus = 00.50 
+				uses = 2
+				category = industry 
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Military_Investment
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 2
+		y = 1
+
+		relative_position_id = CAP_Economic_Policy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Economic_Policy
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}			
+		
+			random_owned_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Tungsten_Mines
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+
+		relative_position_id = CAP_Military_Investment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Military_Investment
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+				
+				add_resource = {
+					type = tungsten
+					amount = 14
+					
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Military_Investment_2
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+
+		relative_position_id = CAP_Tungsten_Mines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Tungsten_Mines
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+			
+				add_extra_state_shared_building_slots = 3
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Infrastructure_1
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+
+		relative_position_id = CAP_Economic_Policy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Economic_Policy
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Infrastructure_2
+		icon = GFX_goal_construction_engineering
+		x = 0
+		y = 1
+
+		relative_position_id = CAP_Infrastructure_1
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Infrastructure_1
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+				
+				add_resource = {
+					type = steel
+					amount = 14
+					
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Infrastructure_3
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+
+		relative_position_id = CAP_Infrastructure_2
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Infrastructure_2
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+				
+				add_extra_state_shared_building_slots = 3
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Civilian_Investment
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -2
+		y = 1
+
+		relative_position_id = CAP_Economic_Policy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Economic_Policy
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Iron_Mines
+		icon = GFX_goal_construction_engineering
+		x = 0
+		y = 1
+
+		relative_position_id = CAP_Civilian_Investment
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Civilian_Investment
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+				
+				add_resource = {
+					type = steel
+					amount = 14
+					
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Civilian_Investment_2
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+
+		relative_position_id = CAP_Iron_Mines
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Iron_Mines
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+				
+				add_extra_state_shared_building_slots = 3
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Nuclear_Arnament
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 2
+
+		relative_position_id = CAP_Infrastructure_3
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Infrastructure_3
+
+		}
+		prerequisite = {
+			focus = CAP_Military_Investment_2
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Civilian_Investment_2
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+				
+				add_extra_state_shared_building_slots = 3
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	############################################################################
+	##War Politics
+	
+	focus = {
+		id = CAP_War_Stability_Act
+		icon = GFX_goal_constitutional_guarantees
+		x = 8
+		y = 1
+
+		relative_position_id = CAP_Economic_Policy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Economic_Policy
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_political_power = 100
+			add_stability = 0.10
+		}
+	}
+	
+	focus = {
+		id = CAP_Rally_The_People
+		icon = GFX_goal_state_economy
+		x = 3
+		y = 1
+
+		relative_position_id = CAP_War_Stability_Act
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_War_Stability_Act
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+
+			add_tech_bonus = { 
+				bonus = 00.50 
+				uses = 2
+				category = industry 
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = CAP_Centralise_Authority
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 1
+		y = 1
+
+		relative_position_id = CAP_War_Stability_Act
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_War_Stability_Act
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_New_Technologies_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Political_Thought
+		icon = GFX_goal_griffon_books
+		x = -1
+		y = 1
+
+		relative_position_id = CAP_War_Stability_Act
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_War_Stability_Act
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = { 
+				bonus = 00.80 
+				uses = 1
+				category = electronics 
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Political_Reform
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -3
+		y = 1
+
+		relative_position_id = CAP_War_Stability_Act
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_War_Stability_Act
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Assembly_Line_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Centralisation
+		icon = GFX_focus_generic_soviet_politics
+		x = 0
+		y = 1
+
+		relative_position_id = CAP_Centralise_Authority
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Centralise_Authority
+			focus = CAP_Rally_The_People
+		}
+		prerequisite = {
+			focus = CAP_War_Stability_Act
+		}
+		mutually_exclusive = {
+			focus = CAP_Autonomy
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Planned_Economy_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Autonomy
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 0
+		y = 1
+
+		relative_position_id = CAP_Political_Thought
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Political_Thought
+			focus = CAP_Political_Reform
+		}
+		prerequisite = {
+			focus = CAP_War_Stability_Act
+		}
+		mutually_exclusive = {
+			focus = CAP_Centralisation
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Capitalist_Economy_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_A_New_Government
+		icon = GFX_goal_technological_supremacy
+		x = 1
+		y = 1
+		
+		available = {
+			CAP = {
+				has_idea = modern_society
+			}
+		}
+
+		relative_position_id = CAP_Autonomy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Autonomy
+			focus = CAP_Centralisation
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_research_slot = 1
+		}
+	}
+	
+	##################################################################
+	#Industrial Centric
+	
+	focus = {
+		id = CAP_Push_Industrialisation
+		icon = GFX_focus_generic_industry_3
+		x = -8
+		y = 1
+
+		relative_position_id = CAP_Economic_Policy
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Economic_Policy
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+
+			add_tech_bonus = { 
+				bonus = 00.25 
+				uses = 1
+				category = industry 
+			}
+			random_owned_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Industrial_Innovation
+		icon = GFX_goal_state_economy
+		x = 3
+		y = 1
+
+		relative_position_id = CAP_Push_Industrialisation
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Push_Industrialisation
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+
+			add_tech_bonus = { 
+				bonus = 00.50 
+				uses = 2
+				category = industry 
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = CAP_New_Technologies
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 1
+		y = 1
+
+		relative_position_id = CAP_Push_Industrialisation
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Push_Industrialisation
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_New_Technologies_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_New_Age_Thinking
+		icon = GFX_goal_griffon_books
+		x = -1
+		y = 1
+
+		relative_position_id = CAP_Push_Industrialisation
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Push_Industrialisation
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = { 
+				bonus = 00.80 
+				uses = 1
+				category = electronics 
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Assembly_Line_Methods
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -3
+		y = 1
+
+		relative_position_id = CAP_Push_Industrialisation
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Push_Industrialisation
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Assembly_Line_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Planned_Economics
+		icon = GFX_focus_generic_soviet_politics
+		x = 0
+		y = 1
+
+		relative_position_id = CAP_New_Technologies
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_New_Technologies
+			focus = CAP_Industrial_Innovation
+		}
+		prerequisite = {
+			focus = CAP_Push_Industrialisation
+		}
+		mutually_exclusive = {
+			focus = CAP_Competitive_Economics
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Planned_Economy_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Competitive_Economics
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 0
+		y = 1
+
+		relative_position_id = CAP_New_Age_Thinking
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_New_Age_Thinking
+			focus = CAP_Assembly_Line_Methods
+		}
+		prerequisite = {
+			focus = CAP_Push_Industrialisation
+		}
+		mutually_exclusive = {
+			focus = CAP_Planned_Economics
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Capitalist_Economy_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Into_The_Modern_Age
+		icon = GFX_goal_technological_supremacy
+		x = -1
+		y = 1
+		
+		available = {
+			CAP = {
+				has_idea = modern_society
+			}
+		}
+
+		relative_position_id = CAP_Planned_Economics
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Planned_Economics
+			focus = CAP_Competitive_Economics
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Industry_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Industry_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_research_slot = 1
+		}
+	}
+	
+	######################################################################################################################
+	#Military section
+	
+	focus = {
+		id = CAP_Review_caprica_Military
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 0
+		y = 0
+		
+		available = {
+
+		}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			country_event = {id = caprica.12 days = 1}
+		}
+	}
+	
+	###Motorised section
+	
+	focus = {
+		id = CAP_Choose_Motorised
+		icon = GFX_goal_generic_army_tanks
+		x = -6
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Review_caprica_Military
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Review_caprica_Military
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Choose_Artillery
+			focus = CAP_Choose_Battleplan
+			focus = CAP_Choose_Mass_Attack
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.60
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Tank_Buff
+		icon = GFX_goal_continuous_armor_production
+		x = -1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Choose_Motorised
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Choose_Motorised
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Motorised_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+
+		completion_reward = {
+
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Tank_Buff_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Motorised_Buff
+		icon = GFX_goal_generic_position_armies
+		x = 1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Choose_Motorised
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Choose_Motorised
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Tank_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Motorised_Buff_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Tank_Research_Buff
+		icon = GFX_focus_generic_license_production
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Tank_Buff
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Tank_Buff
+			focus = CAP_Motorised_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Motorised_Research_Buff
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Motorised_Buff
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Tank_Buff
+			focus = CAP_Motorised_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Motorised_Factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Tank_Research_Buff
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Tank_Research_Buff
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Signal_Company_Bonus
+		icon = GFX_goal_generic_radar
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Motorised_Research_Buff
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Motorised_Research_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 1
+				category = signal_company_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Motorised_End_Bonus
+		icon = GFX_goal_continuous_reduce_training_time
+		x = 1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Motorised_Factories
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Motorised_Factories
+		}
+		prerequisite = {
+			focus = CAP_Signal_Company_Bonus
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Motorised_End_Buff_Idea
+		}
+	}
+	
+	###Superior Firepower
+	
+	focus = {
+		id = CAP_Choose_Artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = -2
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Review_caprica_Military
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Review_caprica_Military
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Choose_Battleplan
+			focus = CAP_Choose_Mass_Attack
+			focus = CAP_Choose_Motorised
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.60
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Artillery_Buff
+		icon = GFX_goal_generic_occupy_start_war
+		x = -1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Choose_Artillery
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Choose_Artillery
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Motorised_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Artillery_Buff_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Support_Buff
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Choose_Artillery
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Choose_Artillery
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Artillery_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Support_Buff_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Artillery_Tech
+		icon = GFX_goal_generic_army_artillery
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Artillery_Buff
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Artillery_Buff
+			focus = CAP_Support_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Military_Tungsten
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Support_Buff
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Artillery_Buff
+			focus = CAP_Support_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+				
+				add_resource = {
+					type = tungsten
+					amount = 10
+					
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Artillery_Factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Artillery_Tech
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Artillery_Tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Support_Tech_Artillery
+		icon = GFX_goal_panzerwaffe
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Military_Tungsten
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Military_Tungsten
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 1
+				category = logistics_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Firepower_End_Bonus
+		icon = GFX_goal_magical_weapon_focus
+		x = 1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Artillery_Factories
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Artillery_Factories
+		}
+		prerequisite = {
+			focus = CAP_Support_Tech_Artillery
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Magical_Weapons_Buff_Idea
+		}
+	}
+	
+	###Grand Battleplan
+	
+	focus = {
+		id = CAP_Choose_Battleplan
+		icon = GFX_goal_generic_position_armies
+		x = 2
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Review_caprica_Military
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Review_caprica_Military
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Choose_Artillery
+			focus = CAP_Choose_Mass_Attack
+			focus = CAP_Choose_Motorised
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.60
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Entrench_Buff
+		icon = GFX_goal_generic_army_doctrines
+		x = -1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Choose_Battleplan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Choose_Battleplan
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Planning_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Entrench_Buff_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Planning_Buff
+		icon = GFX_focus_generic_combined_arms
+		x = 1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Choose_Battleplan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Choose_Battleplan
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Entrench_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Planning_Buff_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Infantry_Tech_Battleplan
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Entrench_Buff
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Entrench_Buff
+			focus = CAP_Planning_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Engineer_Tech_Battleplan
+		icon = GFX_goal_generic_construct_military
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Planning_Buff
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Entrench_Buff
+			focus = CAP_Planning_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 1
+				category = engineers_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Military_Iron
+		icon = GFX_focus_generic_steel
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Infantry_Tech_Battleplan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Infantry_Tech_Battleplan
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {
+				
+				add_resource = {
+					type = steel
+					amount = 14
+					
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Special_Forces_Bonus
+		icon = GFX_goal_generic_special_forces
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Engineer_Tech_Battleplan
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Engineer_Tech_Battleplan
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Battleplan_End_Bonus
+		icon = GFX_focus_secret_rearmament
+		x = 1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Military_Iron
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Military_Iron
+		}
+		prerequisite = {
+			focus = CAP_Special_Forces_Bonus
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 1
+				category = magical_tech
+			}
+		}
+	}
+	
+	###Mass Assault
+	
+	focus = { #I don't care what you think. To me this is still the let's be russia doctrine
+		id = CAP_Choose_Mass_Attack
+		icon = GFX_goal_national_arsenal
+		x = 6
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Review_caprica_Military
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Review_caprica_Military
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Choose_Artillery
+			focus = CAP_Choose_Battleplan
+			focus = CAP_Choose_Motorised
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.60
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Population_Assualt_Buff
+		icon = GFX_goal_conscription
+		x = -1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Choose_Mass_Attack
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Choose_Mass_Attack
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Infantry_Morale_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Population_Buff_1_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Infantry_Morale_Buff
+		icon = GFX_goal_generic_military_sphere
+		x = 1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Choose_Mass_Attack
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Choose_Mass_Attack
+		}
+		
+		mutually_exclusive = {
+			focus = CAP_Population_Assualt_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Infantry_Morale_Buff_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Hospital_Buff
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Population_Assualt_Buff
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Population_Assualt_Buff
+			focus = CAP_Infantry_Morale_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 1
+				category = hospital_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Population_Assualt_Buff_2
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Infantry_Morale_Buff
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Population_Assualt_Buff
+			focus = CAP_Infantry_Morale_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_ideas = CAP_Population_Buff_2_Idea
+		}
+	}
+	
+	focus = {
+		id = CAP_Infantry_Tech_Assualt
+		icon = GFX_goal_griffon_arms_focus_com
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Hospital_Buff
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Hospital_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Heavy_Tank_Buff
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Population_Assualt_Buff_2
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Population_Assualt_Buff_2
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 1
+				category = cat_heavy_armor
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Assualt_End_Bonus
+		icon = GFX_goal_generic_magic
+		x = 1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Infantry_Tech_Assualt
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Infantry_Tech_Assualt
+		}
+		prerequisite = {
+			focus = CAP_Heavy_Tank_Buff
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.20
+				uses = 2
+				category = race_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Military_End_Bonus
+		icon = GFX_focus_indy_swing_the_sword
+		x = 2
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Firepower_End_Bonus
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Motorised_End_Bonus
+			focus = CAP_Firepower_End_Bonus
+			focus = CAP_Battleplan_End_Bonus
+			focus = CAP_Assualt_End_Bonus
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			custom_effect_tooltip = CAP_Military_End_Tooltip
+		
+			hidden_effect = {
+			set_technology = { CAP_Mountaineer_Tech = 1}
+			}
+		}
+	}
+	
+	#################################################################################
+	#Navy stuff
+	
+	focus = {
+		id = CAP_Navy_Start
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -11
+		y = 1
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		relative_position_id = CAP_Review_caprica_Military
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Review_caprica_Military
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			navy_experience = 50
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Destroyer_Tech
+		icon = GFX_focus_generic_destroyer
+		x = -1
+		y = 1
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		relative_position_id = CAP_Navy_Start
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Navy_Start
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Cruiser_Tech
+		icon = GFX_focus_generic_cruiser2
+		x = 1
+		y = 1
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		relative_position_id = CAP_Navy_Start
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Navy_Start
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Navy_Base
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -1
+		y = 1
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		relative_position_id = CAP_Destroyer_Tech
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Destroyer_Tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = CAP_Navy_Base_Tooltip
+			
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+			
+			random_owned_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = naval_base 
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Battleship_Tech
+		icon = GFX_goal_generic_navy_battleship
+		x = 1
+		y = 1
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		relative_position_id = CAP_Destroyer_Tech
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Destroyer_Tech
+		}
+		prerequisite = {
+			focus = CAP_Cruiser_Tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = bc_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Dockyards
+		icon = GFX_goal_dockyard_generic_psody
+		x = 1
+		y = 1
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		relative_position_id = CAP_Cruiser_Tech
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Cruiser_Tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			custom_effect_tooltip = CAP_Dockyards_Tooltip
+		
+			random_owned_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#################################################################################
+	#Air stuff
+	
+	focus = {
+		id = CAP_Air_Start
+		icon = GFX_goal_generic_air_doctrine
+		x = 11
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Review_caprica_Military
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Review_caprica_Military
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+			
+			air_experience = 50
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Fighter_Tech
+		icon = GFX_goal_generic_air_fighter2
+		x = -1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Air_Start
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Air_Start
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = light_fighter
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Bomber_Tech
+		icon = GFX_goal_generic_air_bomber
+		x = 1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Air_Start
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Air_Start
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_CAS_Tech
+		icon = GFX_goal_generic_air_fighter
+		x = -1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Fighter_Tech
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Fighter_Tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cas_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Air_Base
+		icon = GFX_goal_generic_build_airforce
+		x = 1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Fighter_Tech
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Fighter_Tech
+		}
+		prerequisite = {
+			focus = CAP_Bomber_Tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {			
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Rocket_Tech
+		icon = GFX_focus_rocketry
+		x = 1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Bomber_Tech
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Bomber_Tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.7
+				uses = 1
+				category = rocketry
+			}
+		}
+	}
+}
