@@ -266,7 +266,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				
 				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
@@ -317,10 +317,12 @@ focus_tree = {
 		
 			random_owned_state = {
 				
-				add_resource = {
-					type = steel
-					amount = 14
-					
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -369,11 +371,11 @@ focus_tree = {
 		
 			random_owned_state = {
 				
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				
 				add_building_construction = {
-					type = industrial_complex
-					level = 3
+					type = infrastructure
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -564,6 +566,16 @@ focus_tree = {
 
 		}
 		
+		prerequisite = {
+			focus = CAP_A_New_Government
+
+		}
+		
+		prerequisite = {
+			focus = CAP_Into_The_Modern_Age
+
+		}
+		
 		ai_will_do = {
 			factor = 1
 			
@@ -692,11 +704,7 @@ focus_tree = {
 			}	
 		
 
-			add_tech_bonus = { 
-				bonus = 00.50 
-				uses = 2
-				category = industry 
-			}
+			add_war_support = 0.20
 			
 		}
 	}
@@ -741,7 +749,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_New_Technologies_Idea
+			add_stability = 0.20
 		}
 	}
 	
@@ -785,11 +793,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_tech_bonus = { 
-				bonus = 00.80 
-				uses = 1
-				category = electronics 
-			}
+			add_political_power = 100
 		}
 	}
 	
@@ -1822,57 +1826,6 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = CAP_Motorised_End_Bonus
-		icon = GFX_goal_continuous_reduce_training_time
-		x = 1
-		y = 1
-		
-		available = {
-
-		}
-
-		relative_position_id = CAP_Motorised_Factories
-
-		cost = 10
-		
-		prerequisite = {
-			focus = CAP_Motorised_Factories
-		}
-		prerequisite = {
-			focus = CAP_Signal_Company_Bonus
-		}
-
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 100
-				has_country_flag = CAP_AI_Flag_Military_High
-			}
-			modifier = {
-				factor = 20
-				has_country_flag = CAP_AI_Flag_Military_Low
-			}
-		}
-
-		completion_reward = {
-		
-			hidden_effect = {	#ai processing
-				if = {
-					limit = {
-						ROOT = {
-							is_ai = yes
-						}
-					}
-					country_event = caprica.100
-				}
-			}	
-		
-			add_ideas = CAP_Motorised_End_Buff_Idea
-		}
-	}
-	
 	###Superior Firepower
 	
 	focus = {
@@ -2254,57 +2207,6 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = CAP_Firepower_End_Bonus
-		icon = GFX_goal_magical_weapon_focus
-		x = 1
-		y = 1
-		
-		available = {
-
-		}
-
-		relative_position_id = CAP_Artillery_Factories
-
-		cost = 10
-		
-		prerequisite = {
-			focus = CAP_Artillery_Factories
-		}
-		prerequisite = {
-			focus = CAP_Support_Tech_Artillery
-		}
-
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 100
-				has_country_flag = CAP_AI_Flag_Military_High
-			}
-			modifier = {
-				factor = 20
-				has_country_flag = CAP_AI_Flag_Military_Low
-			}
-		}
-
-		completion_reward = {
-		
-			hidden_effect = {	#ai processing
-				if = {
-					limit = {
-						ROOT = {
-							is_ai = yes
-						}
-					}
-					country_event = caprica.100
-				}
-			}	
-		
-			add_ideas = CAP_Magical_Weapons_Buff_Idea
-		}
-	}
-	
 	###Grand Battleplan
 	
 	focus = {
@@ -2682,61 +2584,6 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = CAP_Battleplan_End_Bonus
-		icon = GFX_focus_secret_rearmament
-		x = 1
-		y = 1
-		
-		available = {
-
-		}
-
-		relative_position_id = CAP_Military_Iron
-
-		cost = 10
-		
-		prerequisite = {
-			focus = CAP_Military_Iron
-		}
-		prerequisite = {
-			focus = CAP_Special_Forces_Bonus
-		}
-
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 100
-				has_country_flag = CAP_AI_Flag_Military_High
-			}
-			modifier = {
-				factor = 20
-				has_country_flag = CAP_AI_Flag_Military_Low
-			}
-		}
-
-		completion_reward = {
-		
-			hidden_effect = {	#ai processing
-				if = {
-					limit = {
-						ROOT = {
-							is_ai = yes
-						}
-					}
-					country_event = caprica.100
-				}
-			}	
-		
-			add_tech_bonus = {
-				bonus = 0.50
-				uses = 1
-				category = magical_tech
-			}
-		}
-	}
-	
 	###Mass Assault
 	
 	focus = { #I don't care what you think. To me this is still the let's be russia doctrine
@@ -3107,9 +2954,12 @@ focus_tree = {
 		}
 	}
 	
+	###########################################################################
+	#Military end
+	
 	focus = {
-		id = CAP_Assualt_End_Bonus
-		icon = GFX_goal_generic_magic
+		id = CAP_Military_End_Bonus
+		icon = GFX_focus_indy_swing_the_sword
 		x = 1
 		y = 1
 		
@@ -3117,70 +2967,19 @@ focus_tree = {
 
 		}
 
-		relative_position_id = CAP_Infantry_Tech_Assualt
+		relative_position_id = CAP_Support_Tech_Artillery
 
 		cost = 10
 		
 		prerequisite = {
+			focus = CAP_Motorised_Factories
+			focus = CAP_Signal_Company_Bonus
+			focus = CAP_Artillery_Factories
+			focus = CAP_Support_Tech_Artillery
+			focus = CAP_Military_Iron
+			focus = CAP_Special_Forces_Bonus
 			focus = CAP_Infantry_Tech_Assualt
-		}
-		prerequisite = {
 			focus = CAP_Heavy_Tank_Buff
-		}
-
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 100
-				has_country_flag = CAP_AI_Flag_Military_High
-			}
-			modifier = {
-				factor = 20
-				has_country_flag = CAP_AI_Flag_Military_Low
-			}
-		}
-
-		completion_reward = {
-		
-			hidden_effect = {	#ai processing
-				if = {
-					limit = {
-						ROOT = {
-							is_ai = yes
-						}
-					}
-					country_event = caprica.100
-				}
-			}	
-		
-			add_tech_bonus = {
-				bonus = 0.20
-				uses = 2
-				category = race_tech
-			}
-		}
-	}
-	
-	focus = {
-		id = CAP_Military_End_Bonus
-		icon = GFX_focus_indy_swing_the_sword
-		x = 2
-		y = 1
-		
-		available = {
-
-		}
-
-		relative_position_id = CAP_Firepower_End_Bonus
-
-		cost = 10
-		
-		prerequisite = {
-			focus = CAP_Motorised_End_Bonus
-			focus = CAP_Firepower_End_Bonus
-			focus = CAP_Battleplan_End_Bonus
-			focus = CAP_Assualt_End_Bonus
 		}
 
 		ai_will_do = {
@@ -3388,7 +3187,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = CAP_Navy_Base
+		id = CAP_Submarine_Tech
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = -1
 		y = 1
@@ -3422,7 +3221,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = CAP_Navy_Base_Tooltip
 			
 			hidden_effect = {	#ai processing
 				if = {
@@ -3435,17 +3233,10 @@ focus_tree = {
 				}
 			}	
 			
-			random_owned_state = {
-				limit = {
-					is_coastal = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				
-				add_building_construction = {
-					type = naval_base 
-					level = 2
-					instant_build = yes
-				}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
 			}
 		}
 	}
@@ -3508,8 +3299,10 @@ focus_tree = {
 		}
 	}
 	
+	
+	
 	focus = {
-		id = CAP_Dockyards
+		id = CAP_Carrier_Tech
 		icon = GFX_goal_dockyard_generic_psody
 		x = 1
 		y = 1
@@ -3555,6 +3348,63 @@ focus_tree = {
 				}
 			}	
 		
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cv_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Dockyards
+		icon = GFX_goal_dockyard_generic_psody
+		x = 1
+		y = 1
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		relative_position_id = CAP_Battleship_Tech
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Battleship_Tech
+			focus = CAP_Carrier_Tech
+			focus = CAP_Submarine_Tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
 			custom_effect_tooltip = CAP_Dockyards_Tooltip
 		
 			random_owned_state = {
@@ -3565,6 +3415,71 @@ focus_tree = {
 				
 				add_building_construction = {
 					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Navy_Base
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -1
+		y = 1
+		
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		relative_position_id = CAP_Battleship_Tech
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Battleship_Tech
+			focus = CAP_Carrier_Tech
+			focus = CAP_Submarine_Tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = CAP_Navy_Base_Tooltip
+			
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+			
+			random_owned_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = naval_base 
 					level = 2
 					instant_build = yes
 				}
@@ -3785,7 +3700,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = CAP_Air_Base
+		id = CAP_Navy_Bomber_Tech
 		icon = GFX_goal_generic_build_airforce
 		x = 1
 		y = 1
@@ -3831,19 +3746,16 @@ focus_tree = {
 				}
 			}	
 		
-			random_owned_state = {			
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = naval_air
 			}
 		}
 	}
 	
 	focus = {
-		id = CAP_Rocket_Tech
+		id = CAP_Heavy_Bomber_Tech
 		icon = GFX_focus_rocketry
 		x = 1
 		y = 1
@@ -3858,6 +3770,120 @@ focus_tree = {
 		
 		prerequisite = {
 			focus = CAP_Bomber_Tech
+		}
+		prerequisite = {
+			focus = CAP_Fighter_Tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_strategic_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Air_Base
+		icon = GFX_goal_generic_build_airforce
+		x = 1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Navy_Bomber_Tech
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Navy_Bomber_Tech
+			focus = CAP_Heavy_Bomber_Tech
+			focus = CAP_CAS_Tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 80
+				has_country_flag = CAP_AI_Flag_Military_High
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = CAP_AI_Flag_Military_Low
+			}
+		}
+
+		completion_reward = {
+		
+			hidden_effect = {	#ai processing
+				if = {
+					limit = {
+						ROOT = {
+							is_ai = yes
+						}
+					}
+					country_event = caprica.100
+				}
+			}	
+		
+			random_owned_state = {			
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAP_Rocket_Tech
+		icon = GFX_focus_rocketry
+		x = -1
+		y = 1
+		
+		available = {
+
+		}
+
+		relative_position_id = CAP_Navy_Bomber_Tech
+
+		cost = 10
+		
+		prerequisite = {
+			focus = CAP_Navy_Bomber_Tech
+			focus = CAP_Heavy_Bomber_Tech
+			focus = CAP_CAS_Tech
 		}
 
 		ai_will_do = {
