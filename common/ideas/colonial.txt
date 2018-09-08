@@ -40,5 +40,26 @@ ideas = {
 				
 			}
 		}
+		
+		COLONIAL_research_debuff = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_time_factor = 0.20
+				consumer_goods_factor = 0.10
+				
+			}
+		}
 	}
+	
 }

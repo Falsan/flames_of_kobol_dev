@@ -1,0 +1,174 @@
+add_namespace = conference
+
+###############################################################################
+#Conference Start
+
+#First we tell everyone that the conference has begun
+
+news_event = {
+	id = conference.1
+	title = conference.1.t
+	desc = conference.1.d
+	picture = GFX_report_event_hitler_parade
+	
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+		every_country = {
+			has_country_flag = Conference_Ready_Flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = conference.1.a
+		hidden_effect = {
+			ROOT = {
+				country_event = conference.2
+			}
+		}
+	}
+	
+}
+
+
+###################################################################################
+#Nation speaks
+
+country_event = {
+	id = conference.2
+	title = conference.2.t
+	desc = conference.2.d
+	picture = GFX_report_event_hitler_parade
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = conference.2.a
+		ROOT = {
+			country_event = conference.5
+		}
+		news_event = conference.3
+		set_country_flag = Colonial_Loyalist_Flag
+	}
+	option = {
+		name = conference.2.b
+		ROOT = {
+			country_event = conference.5
+		}
+		
+		news_event = conference.4
+		set_country_flag = Cylon_Turncoat_Flag
+	}
+	
+}
+
+###
+#Nation is colonial!
+
+news_event = {
+	id = conference.3
+	title = conference.3.t
+	desc = conference.3.d
+	picture = GFX_report_event_hitler_parade
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = conference.3.a
+	}
+	
+}
+
+###
+#Nation is cylon!
+
+news_event = {
+	id = conference.4
+	title = conference.4.t
+	desc = conference.4.d
+	picture = GFX_report_event_hitler_parade
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = conference.4.a
+	}
+	
+}
+
+#########################################################################################
+#Now that everyone has picked their side
+
+news_event = {
+	id = conference.6
+	title = conference.6.t
+	desc = conference.6.d
+	picture = GFX_report_event_hitler_parade
+	
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+		every_country = {
+			OR = {
+				has_country_flag = Colonial_Loyalist_Flag
+				has_country_flag = Cylon_Turncoat_Flag
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = conference.6.a
+		trigger = {
+			has_country_flag = Colonial_Loyalist_Flag
+		}
+		every_country = {
+			if = {
+				limit = {
+					has_country_flag = Cylon_Turncoat_Flag
+				}
+			
+				declare_war_on = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+		}
+	}
+	option = {
+		name = conference.6.b
+		trigger = {
+			has_country_flag = Cylon_Turncoat_Flag
+		}
+		set_politics = {
+			parties = {
+				democratic = { 
+					popularity = 10
+				}
+		
+				fascism = {
+					popularity = 90
+				}
+				
+			}
+			
+			ruling_party = fascism
+		}
+	}
+	
+}

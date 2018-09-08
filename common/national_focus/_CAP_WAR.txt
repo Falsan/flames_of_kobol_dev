@@ -51,12 +51,9 @@ focus_tree = {
 					country_event = caprica.100
 				}
 			}	
-		
-			add_tech_bonus = { 
-				bonus = 00.50 
-				uses = 2
-				category = industry 
-			}
+			
+			add_research_slot = 1
+
 		}
 	}
 	
@@ -837,7 +834,11 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Assembly_Line_Idea
+			add_tech_bonus = { 
+				bonus = 00.50 
+				uses = 2
+				category = industry 
+			}
 		}
 	}
 	
@@ -888,7 +889,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Planned_Economy_Idea
+			add_ideas = SHARED_Planned_Economy_Idea
 		}
 	}
 	
@@ -939,7 +940,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Capitalist_Economy_Idea
+			add_ideas = SHARED_Capitalist_Economy_Idea
 		}
 	}
 	
@@ -950,9 +951,7 @@ focus_tree = {
 		y = 1
 		
 		available = {
-			CAP = {
-				has_idea = modern_society
-			}
+
 		}
 
 		relative_position_id = CAP_Autonomy
@@ -962,6 +961,10 @@ focus_tree = {
 		prerequisite = {
 			focus = CAP_Autonomy
 			focus = CAP_Centralisation
+		}
+		
+		bypass = {
+			has_government = fascism
 		}
 		
 		ai_will_do = {
@@ -990,7 +993,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_research_slot = 1
+			remove_ideas = COLONIAL_political_debuff
 		}
 	}
 	
@@ -1150,7 +1153,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_New_Technologies_Idea
+			add_ideas = SHARED_New_Technologies_Idea
 		}
 	}
 	
@@ -1242,7 +1245,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Assembly_Line_Idea
+			add_ideas = SHARED_Assembly_Line_Idea
 		}
 	}
 	
@@ -1293,7 +1296,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Planned_Economy_Idea
+			add_ideas = SHARED_Planned_Economy_Idea
 		}
 	}
 	
@@ -1344,7 +1347,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Capitalist_Economy_Idea
+			add_ideas = SHARED_Capitalist_Economy_Idea
 		}
 	}
 	
@@ -1355,9 +1358,11 @@ focus_tree = {
 		y = 1
 		
 		available = {
-			CAP = {
-				has_idea = modern_society
-			}
+
+		}
+		
+		bypass = {
+			has_government = fascism
 		}
 
 		relative_position_id = CAP_Planned_Economics
@@ -1395,7 +1400,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_research_slot = 1
+			remove_ideas = COLONIAL_research_debuff
 		}
 	}
 	
@@ -1554,7 +1559,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Tank_Buff_Idea
+			add_ideas = SHARED_Tank_Buff_Idea
 		}
 	}
 	
@@ -1607,7 +1612,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Motorised_Buff_Idea
+			add_ideas = SHARED_Motorised_Buff_Idea
 		}
 	}
 	
@@ -1934,7 +1939,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Artillery_Buff_Idea
+			add_ideas = SHARED_Artillery_Buff_Idea
 		}
 	}
 	
@@ -1986,7 +1991,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Support_Buff_Idea
+			add_ideas = SHARED_Support_Buff_Idea
 		}
 	}
 	
@@ -2315,7 +2320,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Entrench_Buff_Idea
+			add_ideas = SHARED_Entrench_Buff_Idea
 		}
 	}
 	
@@ -2367,7 +2372,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Planning_Buff_Idea
+			add_ideas = SHARED_Planning_Buff_Idea
 		}
 	}
 	
@@ -2692,7 +2697,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Population_Buff_1_Idea
+			add_ideas = SHARED_Population_Buff_1_Idea
 		}
 	}
 	
@@ -2744,7 +2749,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Infantry_Morale_Buff_Idea
+			add_ideas = SHARED_Infantry_Morale_Buff_Idea
 		}
 	}
 	
@@ -2846,7 +2851,7 @@ focus_tree = {
 				}
 			}	
 		
-			add_ideas = CAP_Population_Buff_2_Idea
+			add_ideas = SHARED_Population_Buff_2_Idea
 		}
 	}
 	
@@ -2980,6 +2985,14 @@ focus_tree = {
 			focus = CAP_Special_Forces_Bonus
 			focus = CAP_Infantry_Tech_Assualt
 			focus = CAP_Heavy_Tank_Buff
+			focus = CAP_Dockyards
+			focus = CAP_Navy_Base
+			focus = CAP_Rocket_Tech
+			focus = CAP_Air_Base
+		}
+		
+		bypass = {
+			has_government = fascism
 		}
 
 		ai_will_do = {
@@ -3008,11 +3021,7 @@ focus_tree = {
 				}
 			}	
 		
-			custom_effect_tooltip = CAP_Military_End_Tooltip
-		
-			hidden_effect = {
-			set_technology = { CAP_Mountaineer_Tech = 1}
-			}
+			remove_ideas = COLONIAL_military_debuff
 		}
 	}
 	
