@@ -84,7 +84,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			random_owned_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -108,7 +117,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			random_owned_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -132,7 +150,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = COLONIAL_economy_solved
 		}
 	}
 	
@@ -163,7 +181,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			random_owned_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -186,7 +213,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			random_owned_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -209,7 +245,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = CYLON_economy_solved
 		}
 	}
 	
@@ -234,7 +270,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = SHARED_Economy_Fixed_Idea
 		}
 	}
 	
@@ -292,7 +328,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = COLONIAL_environment_buff_1
 		}
 	}
 	
@@ -316,7 +352,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			swap_ideas = {add_idea = COLONIAL_environment_buff_2 remove_idea = COLONIAL_environment_buff_1}
 		}
 	}
 	
@@ -340,7 +376,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			swap_ideas = {add_idea = COLONIAL_environment_buff_3 remove_idea = COLONIAL_environment_buff_2}
 		}
 	}
 	
@@ -371,7 +407,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = CYLON_environment_buff_1
 		}
 	}
 	
@@ -394,7 +430,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			swap_ideas = {add_idea = CYLON_environment_buff_2 remove_idea = CYLON_environment_buff_1}
 		}
 	}
 	
@@ -417,7 +453,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			swap_ideas = {add_idea = CYLON_environment_buff_3 remove_idea = CYLON_environment_buff_2}
 		}
 	}
 	
@@ -442,7 +478,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			remove_ideas = SHARED_Environment_Debuff_Idea
 		}
 	}
 	
@@ -500,7 +536,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_stability = 0.10
 		}
 	}
 	
@@ -524,7 +560,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_manpower = 20000
 		}
 	}
 	

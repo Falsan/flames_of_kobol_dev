@@ -21,6 +21,64 @@ ideas = {
 			}
 		}
 		
+		COLONIAL_environment_buff_1 = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				air_accidents_factor = -0.05
+			}
+		}
+		
+		COLONIAL_environment_buff_2 = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				air_accidents_factor = -0.10
+				air_night_penalty = -0.1
+			}
+		}
+		
+		COLONIAL_environment_buff_3 = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				air_accidents_factor = -0.10
+				air_night_penalty = -0.1
+				convoy_escort_efficiency = 0.20
+				naval_strike_targetting_factor = 0.03
+			}
+		}
+		
 		COLONIAL_political_debuff = {
 			picture = generic_morale_bonus
 
@@ -36,7 +94,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = -0.5
-				production_factory_max_efficiency_factor = -0.2
+				production_factory_max_efficiency_factor = -0.3
 				
 			}
 		}
@@ -57,6 +115,25 @@ ideas = {
 			modifier = {
 				research_time_factor = 0.20
 				consumer_goods_factor = 0.10
+				
+			}
+		}
+		
+		COLONIAL_economy_solved = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
 				
 			}
 		}

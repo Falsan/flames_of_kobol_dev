@@ -1,5 +1,66 @@
 ideas = {
 	country = {
+	
+		SHARED_Environment_Debuff_Idea = {
+		
+			picture = GFX_idea_FRA_army_of_aggression_focus
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = -0.1
+				winter_attrition_factor = 0.5
+				heat_attrition_factor = 0.5
+            }
+		}
+		
+		SHARED_Environment_Debuff_Idea = {
+		
+			picture = GFX_idea_FRA_army_of_aggression_focus
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = -0.1
+				winter_attrition_factor = -0.5
+				heat_attrition_factor = -0.5
+            }
+		}
+	
+		SHARED_Economy_Fixed_Idea = {
+		
+			picture = GFX_idea_FRA_army_of_aggression_focus
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.1
+            }
+		}
 		
 		SHARED_New_Technologies_Idea = {
 			

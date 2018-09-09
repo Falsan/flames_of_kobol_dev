@@ -1,0 +1,85 @@
+ideas = {
+	country = {
+	
+		CYLON_economy_solved = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				min_export = -0.05
+			}
+		}
+		
+		CYLON_environment_buff_1 = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				attrition = -0.1
+			}
+		}
+		
+		CYLON_environment_buff_2 = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				attrition = -0.1
+				air_ace_generation_chance_factor = 0.05
+				air_interception_attack_factor = 0.02
+			}
+		}
+		
+		CYLON_environment_buff_3 = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				attrition = -0.1
+				air_ace_generation_chance_factor = 0.05
+				air_interception_attack_factor = 0.02
+				air_paradrop_attack_factor = 0.02
+				air_paradrop_defence_factor = 0.02
+				
+			}
+		}
+	
+	}
+	
+}
