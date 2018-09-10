@@ -584,7 +584,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = COLONIAL_society_buff
 		}
 	}
 	
@@ -615,7 +615,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = CYLON_society_buff_1
 		}
 	}
 	
@@ -638,7 +638,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_war_support = 0.10
 		}
 	}
 	
@@ -653,7 +653,7 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
-
+			
 		}
 		
 		prerequisite = {
@@ -661,7 +661,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			swap_ideas = {add_idea = CYLON_society_buff_2 remove_idea = CYLON_society_buff_1}
 		}
 	}
 	
@@ -686,7 +686,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_tech_bonus = { 
+				bonus = 00.50 
+				uses = 1
+				category = industry 
+			}
 		}
 	}
 	
@@ -716,7 +720,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			country_event = caprica.5
 		}
 	}
 }

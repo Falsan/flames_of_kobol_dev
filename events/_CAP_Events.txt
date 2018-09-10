@@ -35,11 +35,15 @@ country_event = {
 		name = caprica.2.a
 		set_country_flag = CAP_Colonial_Economic_Flag
 		
-		random = {
-			chance = 20	
-			add_to_variable = {
-				var = CAP_Cylon_Suspision_Rating
-				value = 1
+		random_list = {
+			20 = {	
+				add_to_variable = {
+					var = CAP_Cylon_Suspision_Rating
+					value = 1
+				}
+			}
+			80 = {
+			
 			}
 		}
 		
@@ -48,11 +52,15 @@ country_event = {
 		name = caprica.2.b
 		set_country_flag = CAP_Cylon_Economic_Flag
 		
-		random = {
-			chance = 60	
-			add_to_variable = {
-				var = CAP_Cylon_Suspision_Rating
-				value = 1
+		random_list = {
+			60 = {	
+				add_to_variable = {
+					var = CAP_Cylon_Suspision_Rating
+					value = 1
+				}
+			}
+			40 = {
+			
 			}
 		}
 	}
@@ -72,11 +80,15 @@ country_event = {
 		name = caprica.3.a
 		set_country_flag = CAP_Colonial_Environment_Flag
 		
-		random = {
-			chance = 20	
-			add_to_variable = {
-				var = CAP_Cylon_Suspision_Rating
-				value = 1
+		random_list = {
+			20 = {	
+				add_to_variable = {
+					var = CAP_Cylon_Suspision_Rating
+					value = 1
+				}
+			}
+			80 = {
+			
 			}
 		}
 	}
@@ -84,11 +96,15 @@ country_event = {
 		name = caprica.3.b
 		set_country_flag = CAP_Cylon_Environment_Flag
 		
-		random = {
-			chance = 60	
-			add_to_variable = {
-				var = CAP_Cylon_Suspision_Rating
-				value = 1
+		random_list = {
+			60 = {	
+				add_to_variable = {
+					var = CAP_Cylon_Suspision_Rating
+					value = 1
+				}
+			}
+			40 = {
+			
 			}
 		}
 	}
@@ -108,11 +124,15 @@ country_event = {
 		name = caprica.4.a
 		set_country_flag = CAP_Colonial_Social_Flag
 		
-		random = {
-			chance = 20	
-			add_to_variable = {
-				var = CAP_Cylon_Suspision_Rating
-				value = 1
+		random_list = {
+			20 = {	
+				add_to_variable = {
+					var = CAP_Cylon_Suspision_Rating
+					value = 1
+				}
+			}
+			80 = {
+			
 			}
 		}
 	}
@@ -120,13 +140,37 @@ country_event = {
 		name = caprica.4.b
 		set_country_flag = CAP_Cylon_Social_Flag
 		
-		random = {
-			chance = 60	
-			add_to_variable = {
-				var = CAP_Cylon_Suspision_Rating
-				value = 1
+		random_list = {
+			60 = {	
+				add_to_variable = {
+					var = CAP_Cylon_Suspision_Rating
+					value = 1
+				}
+			}
+			40 = {
+			
 			}
 		}
+	}
+	
+}
+
+###############################################################################
+#Captica is ready for the conference
+
+country_event = {
+	id = caprica.5
+	title = caprica.5.t
+	desc = caprica.5.d
+	picture = GFX_report_event_hitler_parade
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = caprica.5.a
+		set_country_flag = Conference_Ready_Flag
+		
 	}
 	
 }
