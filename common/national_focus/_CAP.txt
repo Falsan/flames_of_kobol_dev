@@ -36,7 +36,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Economic_Issues
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_positive_trade_relations
 		cost = 1.00
 		relative_position_id = CAP_Conference_Initial
 		x = -4
@@ -63,7 +63,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Economic_Issue_Colonial
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 1.00
 		relative_position_id = CAP_Economic_Issues
 		x = -1
@@ -100,7 +100,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Economic_Bonus_1_Colonial
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 1.00
 		relative_position_id = CAP_Economic_Issue_Colonial
 		x = 0
@@ -133,7 +133,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Economic_Bonus_2_Colonial
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_industry_2
 		cost = 1.00
 		relative_position_id = CAP_Economic_Bonus_1_Colonial
 		x = 0
@@ -160,7 +160,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Economic_Issue_Cylon
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_construct_mil_factory
 		cost = 1.00
 		relative_position_id = CAP_Economic_Issues
 		x = 1
@@ -196,7 +196,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Economic_Bonus_1_Cylon
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_construct_mil_factory
 		cost = 1.00
 		relative_position_id = CAP_Economic_Issue_Cylon
 		x = 0
@@ -228,7 +228,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Economic_Bonus_2_Cylon
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_focus_generic_industry_1
 		cost = 1.00
 		relative_position_id = CAP_Economic_Bonus_1_Cylon
 		x = 0
@@ -252,7 +252,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Economic_Bonus_3_Finished
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_industry_3
 		cost = 1.00
 		relative_position_id = CAP_Economic_Bonus_2_Colonial
 		x = 1
@@ -280,7 +280,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Environment_Issues
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 1.00
 		relative_position_id = CAP_Conference_Initial
 		x = 0
@@ -307,7 +307,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Environment_Issue_Colonial
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_position_armies
 		cost = 1.00
 		relative_position_id = CAP_Environment_Issues
 		x = -1
@@ -335,7 +335,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Environment_Bonus_1_Colonial
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 1.00
 		relative_position_id = CAP_Environment_Issue_Colonial
 		x = 0
@@ -359,7 +359,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Environment_Bonus_2_Colonial
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_support_democracy
 		cost = 1.00
 		relative_position_id = CAP_Environment_Bonus_1_Colonial
 		x = 0
@@ -386,7 +386,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Environment_Issue_Cylon
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_propaganda
 		cost = 1.00
 		relative_position_id = CAP_Environment_Issues
 		x = 1
@@ -413,7 +413,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Environment_Bonus_1_Cylon
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_special_forces
 		cost = 1.00
 		relative_position_id = CAP_Environment_Issue_Cylon
 		x = 0
@@ -436,7 +436,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Environment_Bonus_2_Cylon
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_support_fascism
 		cost = 1.00
 		relative_position_id = CAP_Environment_Bonus_1_Cylon
 		x = 0
@@ -460,7 +460,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Environment_Bonus_3_Finished
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_wonderweapons
 		cost = 1.00
 		relative_position_id = CAP_Environment_Bonus_2_Colonial
 		x = 1
@@ -488,7 +488,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Society_Issues
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_political_pressure
 		cost = 1.00
 		relative_position_id = CAP_Conference_Initial
 		x = 4
@@ -515,7 +515,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Society_Issue_Colonial
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_improve_relations
 		cost = 1.00
 		relative_position_id = CAP_Society_Issues
 		x = -1
@@ -543,7 +543,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Society_Bonus_1_Colonial
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_production
 		cost = 1.00
 		relative_position_id = CAP_Society_Issue_Colonial
 		x = 0
@@ -567,7 +567,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Society_Bonus_2_Colonial
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_major_alliance
 		cost = 1.00
 		relative_position_id = CAP_Society_Bonus_1_Colonial
 		x = 0
@@ -594,7 +594,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Society_Issue_Cylon
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_generic_dangerous_deal
 		cost = 1.00
 		relative_position_id = CAP_Society_Issues
 		x = 1
@@ -621,7 +621,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Society_Bonus_1_Cylon
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_self_management
 		cost = 1.00
 		relative_position_id = CAP_Society_Issue_Cylon
 		x = 0
@@ -644,7 +644,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Society_Bonus_2_Cylon
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_military_mission
 		cost = 1.00
 		relative_position_id = CAP_Society_Bonus_1_Cylon
 		x = 0
@@ -668,7 +668,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Society_Bonus_3_Finished
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_diplomatic_treaty
 		cost = 1.00
 		relative_position_id = CAP_Society_Bonus_2_Colonial
 		x = 1
@@ -697,7 +697,7 @@ focus_tree = {
 	focus = {
 		id = CAP_Conference_Final
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_the_giant_wakes
 		cost = 1.00
 		relative_position_id = CAP_Environment_Bonus_3_Finished
 		x = 0
