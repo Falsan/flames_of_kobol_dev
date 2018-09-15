@@ -2,13 +2,9 @@ state={
 	id=260
 	name="STATE_260"
 	provinces={
-		97 931 932 
+		
 	}
-	history={
-		owner = AQU
-		add_core_of = AQU
 
-	}
 	manpower=0
 	buildings_max_level_factor=1.000
 }

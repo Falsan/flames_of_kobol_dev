@@ -20,7 +20,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Economic_Policy
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_forceful_treaty
 		x = 44
 		y = 0
 
@@ -219,7 +219,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Infrastructure_1
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 1
 
@@ -273,7 +273,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Infrastructure_2
-		icon = GFX_goal_construction_engineering
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 1
 
@@ -327,7 +327,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Infrastructure_3
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 1
 
@@ -435,7 +435,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Iron_Mines
-		icon = GFX_goal_construction_engineering
+		icon = GFX_goal_generic_construction2
 		x = 0
 		y = 1
 
@@ -541,7 +541,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Nuclear_Arnament
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_wonderweapons
 		x = 0
 		y = 2
 
@@ -599,15 +599,10 @@ focus_tree = {
 				}
 			}	
 		
-			random_owned_state = {
-				
-				add_extra_state_shared_building_slots = 3
-				
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
+			add_tech_bonus = { 
+				bonus = 00.80 
+				uses = 1
+				category = nuclear 
 			}
 		}
 	}
@@ -617,7 +612,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_War_Stability_Act
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_generic_political_pressure
 		x = 8
 		y = 1
 
@@ -662,7 +657,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Rally_The_People
-		icon = GFX_goal_state_economy
+		icon = GFX_focus_generic_little_entente
 		x = 3
 		y = 1
 
@@ -708,7 +703,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Centralise_Authority
-		icon = GFX_goal_tfv_generic_tech_sharing
+		icon = GFX_goal_generic_more_territorial_claims
 		x = 1
 		y = 1
 
@@ -752,7 +747,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Political_Thought
-		icon = GFX_goal_griffon_books
+		icon = GFX_focus_generic_support_the_left_right
 		x = -1
 		y = 1
 
@@ -796,7 +791,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Political_Reform
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_generic_major_alliance
 		x = -3
 		y = 1
 
@@ -946,7 +941,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_A_New_Government
-		icon = GFX_goal_technological_supremacy
+		icon = GFX_goal_generic_military_deal
 		x = 1
 		y = 1
 		
@@ -1065,7 +1060,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Industrial_Innovation
-		icon = GFX_goal_state_economy
+		icon = GFX_goal_continuous_repairments
 		x = 3
 		y = 1
 
@@ -1159,7 +1154,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_New_Age_Thinking
-		icon = GFX_goal_griffon_books
+		icon = GFX_focus_research
 		x = -1
 		y = 1
 
@@ -1353,7 +1348,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Into_The_Modern_Age
-		icon = GFX_goal_technological_supremacy
+		icon = GFX_goal_generic_fortify_city
 		x = -1
 		y = 1
 		
@@ -2593,7 +2588,7 @@ focus_tree = {
 	
 	focus = { #I don't care what you think. To me this is still the let's be russia doctrine
 		id = CAP_Choose_Mass_Attack
-		icon = GFX_goal_national_arsenal
+		icon = GFX_goal_generic_small_arms
 		x = 6
 		y = 1
 		
@@ -2651,7 +2646,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Population_Assualt_Buff
-		icon = GFX_goal_conscription
+		icon = GFX_goal_generic_cavalry
 		x = -1
 		y = 1
 		
@@ -2857,7 +2852,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Infantry_Tech_Assualt
-		icon = GFX_goal_griffon_arms_focus_com
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 1
 		
@@ -2964,7 +2959,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Military_End_Bonus
-		icon = GFX_focus_indy_swing_the_sword
+		icon = GFX_goal_continuous_increase_nu
 		x = 1
 		y = 1
 		
@@ -3197,7 +3192,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Submarine_Tech
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_goal_generic_navy_submarine
 		x = -1
 		y = 1
 		
@@ -3312,7 +3307,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Carrier_Tech
-		icon = GFX_goal_dockyard_generic_psody
+		icon = GFX_goal_generic_navy_carrier
 		x = 1
 		y = 1
 		
@@ -3367,7 +3362,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Dockyards
-		icon = GFX_goal_dockyard_generic_psody
+		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 1
 		y = 1
 		
@@ -3710,7 +3705,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Navy_Bomber_Tech
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_goal_generic_air_naval_bomber
 		x = 1
 		y = 1
 		
@@ -3765,7 +3760,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAP_Heavy_Bomber_Tech
-		icon = GFX_focus_rocketry
+		icon = GFX_goal_generic_CAS
 		x = 1
 		y = 1
 		
