@@ -2,13 +2,13 @@ state={
 	id=238
 	name="STATE_238"
 	provinces={
-		35 36 1349 
+		35 36 1349 34 1173 820 33 30 27
 	}
 	history={
 		owner = CAP
 		add_core_of = CAP
 
 	}
-	manpower=0
+	manpower=800000
 	buildings_max_level_factor=1.000
 }
