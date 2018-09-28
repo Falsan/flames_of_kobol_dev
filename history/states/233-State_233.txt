@@ -2,7 +2,12 @@ state={
 	id=233
 	name="STATE_233"
 	provinces={
-		464 465 466 467 1142 1194 
+		464 465 466 467 1142 1194 1069 964 110 112 754 755 1184 1185 1373 785 1255 462 1454 
+	}
+	history={
+		owner = PIC
+		add_core_of = PIC
+
 	}
 	manpower=0
 	buildings_max_level_factor=1.000

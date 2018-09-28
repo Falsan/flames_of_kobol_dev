@@ -2,7 +2,7 @@ state={
 	id=169
 	name="STATE_169"
 	provinces={
-		994 995 996 
+		994 995 996 542 728 992 993 1073 1213 1286 727 213 729 543
 	}
 	history={
 		owner = PIC

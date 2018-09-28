@@ -2,7 +2,12 @@ state={
 	id=219
 	name="STATE_219"
 	provinces={
-		785 1070 1255 1430 
+		1070 1430 111 670 1071 671 673 674 1183 1244 1429 1285 672 681 682 1042 1399 
+	}
+	history={
+		owner = PIC
+		add_core_of = PIC
+
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
