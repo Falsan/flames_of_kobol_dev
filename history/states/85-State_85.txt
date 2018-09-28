@@ -2,13 +2,9 @@ state={
 	id=85
 	name="STATE_85"
 	provinces={
-		825 1038 1039 
+		 
 	}
-	history={
-		owner = CAC
-		add_core_of = CAC
 
-	}
 	manpower=0
 	buildings_max_level_factor=1.000
 }

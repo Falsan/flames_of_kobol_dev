@@ -2,7 +2,12 @@ state={
 	id=102
 	name="STATE_102"
 	provinces={
-		187 188 476 895 896 937 988 
+		187 476 895 896 988 892 893 935 1247 474 475 639 640 641 747 891 473 890 1464 642 643 644 984 645 1240 1363 1364 742 743 744 746 1062 
+	}
+	history={
+		owner = CAC
+		add_core_of = CAC
+
 	}
 	manpower=0
 	buildings_max_level_factor=1.000

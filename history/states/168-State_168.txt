@@ -2,7 +2,12 @@ state={
 	id=168
 	name="STATE_168"
 	provinces={
-		357 358 359 360 
+		357 358 1009 1121 354 491 492 766 1131 1031 355 1032 684 685 1339 683 687 821 1398 356 686 689 
+	}
+	history={
+		owner = TAU
+		add_core_of = TAU
+
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
