@@ -2,7 +2,12 @@ state={
 	id=108
 	name="STATE_108"
 	provinces={
-		23 25 1175 
+		1175 21 22 802 1171 19 20 1172 445 1097 1353 441 442 443 444 872 513 514 515 1189 1191 439 440 516 800 801 517 1190 1446 437 438  
+	}
+	history={
+		owner = AER
+		add_core_of = AER
+
 	}
 	manpower=0
 	buildings_max_level_factor=1.000

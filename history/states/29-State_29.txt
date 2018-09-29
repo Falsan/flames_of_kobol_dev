@@ -2,7 +2,12 @@ state={
 	id=29
 	name="STATE_29"
 	provinces={
-		635 637 1083 1084 
+		635 637 1083 1327 1021 1129 566 632 1022 1235 1276 526 564 565 1293 1380 567 1019 1434 568 569 571 969 525 572 968 970 971 570 636 908 922 909
+	}
+	history={
+		owner = AER
+		add_core_of = AER
+
 	}
 	manpower=0
 	buildings_max_level_factor=1.000

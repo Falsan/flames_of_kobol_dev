@@ -2,13 +2,9 @@ state={
 	id=43
 	name="STATE_43"
 	provinces={
-		873 874 1104 1105 1357 
+		
 	}
-	history={
-		owner = AER
-		add_core_of = AER
 
-	}
 	manpower=0
 	buildings_max_level_factor=1.000
 }
