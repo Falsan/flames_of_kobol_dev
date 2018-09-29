@@ -2,7 +2,12 @@ state={
 	id=246
 	name="STATE_246"
 	provinces={
-		286 1138 1139 
+		1138 1139 805 289 290 291 523 524 522 597 972 973 1153 1256 1340 760 1160 314 867 868 869 870 933 113 114
+	}
+	history={
+		owner = VIR
+		add_core_of = VIR
+
 	}
 	manpower=0
 	buildings_max_level_factor=1.000
